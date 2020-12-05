@@ -1,0 +1,31 @@
+<p>work-with-omdb-api works!</p>
+
+<div class="block">
+    <input [(ngModel)]="requestMovie.t" name="t" id="t" type="text" placeholder="Film's name">
+    <br>
+    <input [(ngModel)]="requestMovie.y" name="y" id="y" type="text"  placeholder="Year">
+    <br>
+    <select [(ngModel)]="requestMovie.type" name="type" id="type">
+        <option selected>movie</option>
+        <option>series</option>
+        <option>episode</option>
+    </select>   
+    <hr>
+    <input type="submit" (click)="submitMovie(requestMovie)" value="Search"> 
+</div>
+
+<div *ngIf="receivedMovie">
+    <div class="beforeAfter">
+        <div *ngIf="receivedMovie.Poster" class="float-left">
+            <img *ngIf="receivedMovie.Poster" [src]="receivedMovie.Poster">
+        </div>
+        <div *ngIf="receivedMovie.Poster" class="float-left" style="padding: 20px;">
+            <p>Title: {{receivedMovie.Title}}</p>
+            <p>Year: {{receivedMovie.Year}}</p>
+            <p>Rating imdb: {{receivedMovie.imdbRating}}</p>
+            <p>Runtime: {{receivedMovie.Runtime}}</p>
+            <p>Writer: {{receivedMovie.Writer}}</p>
+            <p>Actors: {{receivedMovie.Actors}}</p>
+        </div>
+    </div>
+</div>

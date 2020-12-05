@@ -1,0 +1,50 @@
+
+
+input {
+    border-radius: 9px;
+    background-color:azure;
+    margin: 10px;
+    text-align: center;
+    
+    width: 90%;
+}
+
+select {width: 92%}
+
+
+button {
+    padding: 8px;
+}
+
+.block {
+    text-align: center;
+    margin: 5% auto;
+    width:50%;
+    border-radius: 10px;
+    border: 3px solid black
+}
+
+
+img {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px grey;
+  }
+
+  .beforeAfter:before, .beforeAfter:after {
+    content: "";
+    display: table;
+    text-align: center;
+    /* margin: auto; */
+}
+
+.beforeAfter:after{
+    clear: both;
+}
+
+.float-left {
+    float: left;
+    margin: 10px;
+    box-shadow: 5px 5px 10px grey;
+}
